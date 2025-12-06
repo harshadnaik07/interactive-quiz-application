@@ -1,0 +1,172 @@
+:root{
+  --bg1: #4facfe;
+  --bg2: #00f2fe;
+  --card-bg: #ffffff;
+  --accent: #0077cc;
+  --success: #28a745;
+  --danger: #e04b4b;
+  --muted: #9b9b9b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(to right,rgb(200, 193, 244),rgb(95, 95, 185));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:28px;
+  color:#222;
+}
+
+/* Wrapper */
+.quiz-wrapper{
+  width:100%;
+  max-width:720px;
+}
+
+/* Card */
+.card{
+  background:var(--card-bg);
+  border-radius:14px;
+  padding:20px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.14);
+  margin-top:18px;
+}
+
+/* Header */
+.quiz-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  color:#fff;
+}
+.quiz-header h1{
+  margin:0;
+  font-size:20px;
+  font-weight:700;
+  filter: drop-shadow(0 2px 6px rgba(0,0,0,0.2));
+}
+.meta{display:flex;gap:12px;align-items:center}
+#progressText, #scoreText{
+  background:rgba(255,255,255,0.15);
+  padding:6px 10px;
+  border-radius:999px;
+  font-weight:600;
+  color:#fff;
+  font-size:13px;
+}
+
+/* Timer row */
+.timer-row{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:12px;
+}
+#timeLabel{
+  min-width:44px;
+  text-align:center;
+  font-weight:700;
+  color:var(--muted);
+}
+.time-bar-outer{
+  flex:1;
+  height:10px;
+  background: #f1f1f1;
+  border-radius:999px;
+  overflow:hidden;
+  box-shadow: inset 0 -2px 6px rgba(0,0,0,0.06);
+}
+.time-bar{
+  height:100%;
+  width:100%;
+  background: linear-gradient(90deg, #ffb199, #ff7b7b);
+  transform-origin:left;
+  transition: width 0.2s linear;
+}
+
+/* Question */
+.question{
+  font-size:18px;
+  margin:6px 0 14px 0;
+}
+
+/* Options */
+.options{
+  display:grid;
+  gap:10px;
+}
+.options button{
+  padding:12px 14px;
+  border-radius:10px;
+  border: none;
+  text-align:left;
+  font-size:15px;
+  cursor:pointer;
+  background:#f7f7f8;
+  box-shadow: 0 4px 12px rgba(16,24,40,0.04);
+  transition: transform .12s ease, box-shadow .12s ease, background  .12s ease;
+}
+.options button:hover{ transform: translateY(-3px) }
+.options button:active{ transform: scale(.995) }
+
+.options button.correct{
+  background: linear-gradient(90deg,#8ad68a,#4caf50);
+  color:white;
+}
+.options button.wrong{
+  background: linear-gradient(90deg,#ff9b9b,#e04b4b);
+  color:white;
+}
+.options button:disabled{ opacity:0.95; cursor:default; }
+
+/* Controls */
+.controls{
+  display:flex;
+  gap:12px;
+  justify-content:flex-end;
+  margin-top:16px;
+}
+.btn{
+  padding:10px 16px;
+  border-radius:10px;
+  border:none;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  font-weight:700;
+  box-shadow: 0 6px 18px rgba(2,80,150,0.12);
+}
+.btn:disabled{
+  background:grey;
+  cursor:not-allowed;
+  box-shadow:none;
+}
+.btn.ghost{
+  background:transparent;
+  color:var(--accent);
+  border:2px solid rgba(0,0,0,0.06);
+}
+.hidden{display:none}
+
+/* Result card */
+#result{
+  text-align:center;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px) }
+  to   { opacity: 1; transform: translateY(0) }
+}
+.fade-in{ animation: fadeIn .35s ease both }
+
+/* Small screens */
+@media (max-width:520px){
+  .quiz-header{flex-direction:column; align-items:flex-start; gap:6px}
+  .card{padding:16px}
+}
