@@ -229,6 +229,8 @@ Custom quiz template Classroom teaching 
 
 <img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/0d6c0fa4-7407-487e-9b8a-1fa67f48acde" />
 
+<img width="1905" height="892" alt="Image" src="https://github.com/user-attachments/assets/66497cc6-60f0-491b-ab8f-5cb5cb888452" />
+
 
 
 
