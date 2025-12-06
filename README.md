@@ -223,7 +223,11 @@ Portfolio demonstration project
 
 JavaScript revision tool
 
-Custom quiz template Classroom teaching aid
+Custom quiz template Classroom teaching 
+
+#OUTPUT
+
+<img width="1919" height="903" alt="Image" src="https://github.com/user-attachments/assets/0d6c0fa4-7407-487e-9b8a-1fa67f48acde" />
 
 
 
